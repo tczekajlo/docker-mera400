@@ -4,7 +4,8 @@ FROM   ubuntu:14.04
 RUN	apt-get clean
 RUN	apt-get update
 RUN	apt-get install -y --force-yes gcc git sudo openssh-server openssh-client \
-		cmake make bison flex libncurses5-dev libreadline6 libreadline6-dev
+		cmake make bison flex libncurses5-dev libreadline6 libreadline6-dev \
+		telnet
 
 RUN 	mkdir /var/run/sshd
 
