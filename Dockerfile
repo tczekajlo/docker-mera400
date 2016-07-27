@@ -15,8 +15,8 @@ ADD	./misc/build.sh /mera/build/build.sh
 
 RUN	cd /mera/build/; /bin/bash /mera/build/build.sh
 
-RUN	cd /mera; wget http://mera400.pl/img/bootw.bin; wget http://mera400.pl/img/crook5-p8f-1.0.3.zip
-RUN	cd /mera; unzip crook5-p8f-1.0.3.zip; rm crook5-p8f-1.0.3.zip
+RUN	cd /mera; wget http://mera400.pl/img/crook5-p8f-1.0.4.zip
+RUN	cd /mera; unzip crook5-p8f-1.0.4.zip; rm crook5-p8f-1.0.4.zip
 
 RUN 	sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
