@@ -7,7 +7,7 @@ for PKG in emawp emcrk emelf emdas em400 emas emlin assem ; do
         wget http://mera400.pl/releases/$PKG/$PKG-latest.tar.gz
         tar zxf $PKG-latest.tar.gz
     else
-        echo "Unknown source. Exit."
+        echo "Unknown source. Available sources: git, release. Exit."
         exit 1
     fi
 	mkdir $PKG/build
