@@ -1,5 +1,6 @@
-FROM   ubuntu:14.04
+FROM   ubuntu:trusty
 
+ARG source
 
 RUN	apt-get clean
 RUN	apt-get update
@@ -13,7 +14,7 @@ RUN	/usr/sbin/useradd -m -d /mera -U mera -s /bin/bash
 RUN	mkdir /mera/build
 ADD	./misc/build.sh /mera/build/build.sh
 
-RUN	cd /mera/build/; /bin/bash /mera/build/build.sh
+RUN	cd /mera/build/; /bin/bash /mera/build/build.sh ${source}
 
 RUN	cd /mera; wget http://mera400.pl/img/crook5-p8f-1.0.4.zip
 RUN	cd /mera; unzip crook5-p8f-1.0.4.zip; rm crook5-p8f-1.0.4.zip
